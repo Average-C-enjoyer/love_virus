@@ -15,6 +15,7 @@ const cracks = document.getElementById("cracks");
 
 const canvas = document.getElementById("heart-canvas");
 const ctx = canvas.getContext("2d");
+const finalMessage = document.getElementById("final-message");
 
 function typeText(element, text, speed = 40) {
     return new Promise(resolve => {
@@ -206,6 +207,10 @@ function animateHeart() {
 function startHeartAnimation() {
     createParticles();
     animateHeart();
+
+    setTimeout(() => {
+        finalMessage.classList.add("show");
+    }, 5000);
 }
 
 introSequence();

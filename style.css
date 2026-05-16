@@ -181,3 +181,34 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
+#final-message {
+    position: absolute;
+
+    bottom: 10%;
+
+    width: 100%;
+    text-align: center;
+
+    font-size: clamp(28px, 5vw, 52px);
+
+    color: #ff3355;
+
+    text-shadow:
+        0 0 10px #ff3355,
+        0 0 20px #ff3355,
+        0 0 40px #ff3355;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 2s ease,
+        transform 2s ease;
+}
+
+#final-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
