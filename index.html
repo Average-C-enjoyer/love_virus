@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>L0VE.exe</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- INTRO SCREEN -->
+    <div id="intro-screen" class="screen active">
+        <div class="center-box">
+            <div class="system-line">
+                <span class="prefix">[System]</span>
+                <span id="intro-text"></span>
+            </div>
+
+            <div class="system-line second-line hidden">
+                <span class="prefix">[System]</span>
+                <span id="warning-text"></span>
+            </div>
+
+            <button id="protect-btn" class="hidden">
+                Защитить устройство
+            </button>
+        </div>
+    </div>
+
+    <!-- TERMINAL SCREEN -->
+    <div id="terminal-screen" class="screen">
+        <div id="terminal-output"></div>
+    </div>
+
+    <!-- SEGFAULT -->
+    <div id="segfault-screen" class="screen">
+        <div id="segfault-box">
+            SEGMENTATION FAULT
+        </div>
+
+        <div id="cracks"></div>
+    </div>
+
+    <!-- LOVE SCREEN -->
+    <div id="love-screen" class="screen">
+        <h1 id="love-title">
+            Вы заражены вирусом <span>L0VE.exe</span>
+        </h1>
+
+        <canvas id="heart-canvas"></canvas>
+    </div>
+
+    <!-- Sound -->
+    <audio id="glass-audio" preload="auto">
+        <source src="glass.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
